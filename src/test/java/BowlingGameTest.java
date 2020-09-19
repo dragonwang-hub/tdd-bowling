@@ -58,4 +58,14 @@ public class BowlingGameTest {
         assertEquals(110, result);
     }
 
+    @Test
+    void should_return_calculation_value_when_any_frame_twice_throw_total_score_equals_10() {
+        //given
+        BowlingScore bowlingScore = new BowlingScore();
+        int[][] eachTimeScoreOfAnyFrameTwiceThrowTotalScoreEquals10 = {{6, 3}, {8, 2}, {5, 4}, {4, 5}, {1, 8}, {7, 2}, {3, 6}, {5, 4}, {2, 7}, {2, 8}, {1, 8}};
+        //when
+        int result = bowlingScore.calculationScore(eachTimeScoreOfAnyFrameTwiceThrowTotalScoreEquals10);
+        //then
+        assertEquals(98, result);
+    }
 }
