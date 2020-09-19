@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BowlingScore {
-    public int calculationScore(int[][] eachTimeScore) {
+    public int calculationScore(int[][] eachTimeScore) throws Exception {
         if (eachTimeScore == null || eachTimeScore.length < 10) {
-            //throw exception
+            throw new Exception();
         }
         List<Integer> eachFrameScore = new ArrayList<Integer>();
         for (int i = 0; i < 10; i++) {
@@ -22,7 +22,6 @@ public class BowlingScore {
             }
             eachFrameScore.add(iTimesFrameCurScore);
         }
-        //int totalScore = 0;
         int totalScore = eachFrameScore.stream().reduce(0, Integer::sum);
         return totalScore;
 

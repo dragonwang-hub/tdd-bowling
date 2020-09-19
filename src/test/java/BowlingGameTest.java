@@ -15,7 +15,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_return_0_when_No_knock_down_bowling() {
+    void should_return_0_when_No_knock_down_bowling() throws Exception {
         //given
         BowlingScore bowlingScore = new BowlingScore();
         int[][] eachTimeScoreOfNoKnockDownBowling = {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}};
@@ -26,7 +26,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_return_300_when_knock_down_all_bowling_each_frame_first_throw() {
+    void should_return_300_when_knock_down_all_bowling_each_frame_first_throw() throws Exception {
         //given
         BowlingScore bowlingScore = new BowlingScore();
         int[][] eachTimeScoreOfKnockDownAllBowlingEachFrameFirstThrow = {{10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}};
@@ -37,7 +37,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_return_cumulative_value_when_each_frame_score_less_than_10() {
+    void should_return_cumulative_value_when_each_frame_score_less_than_10() throws Exception {
         //given
         BowlingScore bowlingScore = new BowlingScore();
         int[][] eachTimeScoreOfEachFrameScoreLessThan10 = {{6, 3}, {8, 1}, {5, 4}, {4, 5}, {1, 8}, {7, 2}, {3, 6}, {5, 4}, {2, 7}, {1, 8}};
@@ -48,7 +48,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_return_calculation_value_when_any_frame_first_throw_score_equals_10() {
+    void should_return_calculation_value_when_any_frame_first_throw_score_equals_10() throws Exception {
         //given
         BowlingScore bowlingScore = new BowlingScore();
         int[][] eachTimeScoreOfAnyFrameFirstThrowScoreEquals10 = {{6, 3}, {8, 1}, {10, 0}, {4, 5}, {1, 8}, {7, 2}, {10, 0}, {5, 4}, {2, 7}, {1, 8}};
@@ -59,7 +59,7 @@ public class BowlingGameTest {
     }
 
     @Test
-    void should_return_calculation_value_when_any_frame_twice_throw_total_score_equals_10() {
+    void should_return_calculation_value_when_any_frame_twice_throw_total_score_equals_10() throws Exception {
         //given
         BowlingScore bowlingScore = new BowlingScore();
         int[][] eachTimeScoreOfAnyFrameTwiceThrowTotalScoreEquals10 = {{6, 3}, {8, 2}, {5, 4}, {4, 5}, {1, 8}, {7, 2}, {3, 6}, {5, 4}, {2, 7}, {2, 8}, {1, 8}};
