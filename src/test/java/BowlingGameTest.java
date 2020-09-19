@@ -1,6 +1,7 @@
 import BowlingScore.BowlingScore;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BowlingGameTest {
@@ -12,4 +13,16 @@ public class BowlingGameTest {
             bowlingScore.calculationScore(eachTimeScoreOfNotFinishCompetition);
         });
     }
+
+    @Test
+    void should_return_0_when_No_knock_down_bowling() {
+        //given
+        BowlingScore bowlingScore = new BowlingScore();
+        int[][] eachTimeScoreOfNoKnockDownBowling = {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}};
+        //when
+        int result = bowlingScore.calculationScore(eachTimeScoreOfNoKnockDownBowling);
+        //then
+        assertEquals(0, result);
+    }
+
 }
