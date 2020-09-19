@@ -47,4 +47,15 @@ public class BowlingGameTest {
         assertEquals(90, result);
     }
 
+    @Test
+    void should_return_calculation_value_when_any_frame_first_throw_score_equals_10() {
+        //given
+        BowlingScore bowlingScore = new BowlingScore();
+        int[][] eachTimeScoreOfAnyFrameFirstThrowScoreEquals10 = {{6, 3}, {8, 1}, {10, 0}, {4, 5}, {1, 8}, {7, 2}, {10, 0}, {5, 4}, {2, 7}, {1, 8}};
+        //when
+        int result = bowlingScore.calculationScore(eachTimeScoreOfAnyFrameFirstThrowScoreEquals10);
+        //then
+        assertEquals(110, result);
+    }
+
 }
