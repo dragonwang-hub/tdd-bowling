@@ -25,4 +25,15 @@ public class BowlingGameTest {
         assertEquals(0, result);
     }
 
+    @Test
+    void should_return_300_when_knock_down_all_bowling_each_frame_first_throw() {
+        //given
+        BowlingScore bowlingScore = new BowlingScore();
+        int[][] eachTimeScoreOfKnockDownAllBowlingEachFrameFirstThrow = {{10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}, {10, 0}};
+        //when
+        int result = bowlingScore.calculationScore(eachTimeScoreOfKnockDownAllBowlingEachFrameFirstThrow);
+        //then
+        assertEquals(300, result);
+    }
+
 }
