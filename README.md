@@ -27,3 +27,47 @@
 - 使用TDD方式实现上述需求，注意TDD Cycle（红-绿-重构）
 - YAGNI
 - 小步提交
+
+
+### tasking
+1.given
+没有打完10轮 /或者9轮第一把10分，却没有11轮 /或者10轮第1把10没有12轮 /10轮10分没有11轮
+2.when
+计算总分
+3.then
+抛出异常 未完成比赛 not finish competition
+
+1.given
+全部没有击倒球
+2.when
+计算总分
+3.then
+return 0
+
+1.given
+每次每轮的第一把全击中
+2.when
+计算总分
+3.then
+return 300
+
+1.given
+每轮都没有10分情况
+2.when
+计算总分
+3.then
+累加即可
+
+1.given
+存在一两次第一把10分全中
+2.when
+计算总分
+3.then
+计算每轮分数再相加
+
+1.given
+存在一两把补中情况
+2.when
+计算每轮分数再累加
+3.then
+return 手动计算具体值
